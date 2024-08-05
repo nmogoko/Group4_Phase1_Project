@@ -1,0 +1,24 @@
+{
+    "readingList":[{
+        "id": "",
+        "booktitle": "",
+        "author": ""
+}],
+    "movieList": [{
+        "id": "",
+        "movietitle": ""
+    }],
+    "toDo": [{
+        "title": "",
+        "date": "",
+        "time": "",
+        "details": ""
+    }],
+    "quickNotes":[{
+        "text": ""
+    }],
+    "dailyTasks": [{
+        "title": "",
+        "text": ""
+    }]
+}
