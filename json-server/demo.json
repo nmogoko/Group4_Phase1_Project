@@ -1,24 +1,36 @@
 {
-    "readingList":[{
-        "id": "",
-        "booktitle": "",
-        "author": ""
-}],
-    "movieList": [{
-        "id": "",
-        "movietitle": ""
-    }],
-    "toDo": [{
-        "title": "",
-        "date": "",
-        "time": "",
-        "details": ""
-    }],
-    "quickNotes":[{
-        "text": ""
-    }],
-    "dailyTasks": [{
-        "title": "",
-        "text": ""
-    }]
+  "readingList": [
+    {
+      "id": "",
+      "booktitle": "",
+      "author": "",
+      "genre": ""
+    }
+  ],
+  "movieList": [
+    {
+      "id": "",
+      "movietitle": "",
+      "genre": ""
+    }
+  ],
+  "toDo": [
+    {
+      "title": "",
+      "date": "",
+      "time": "",
+      "details": ""
+    }
+  ],
+  "quickNotes": [
+    {
+      "text": ""
+    }
+  ],
+  "dailyTasks": [
+    {
+      "title": "",
+      "text": ""
+    }
+  ]
 }
