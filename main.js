@@ -1,1 +1,5 @@
-const card = document.querySelector(".card");
+const readingList = document.getElementById("reading-list")
+
+function displayReadingList(){
+    
+}
