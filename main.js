@@ -1,5 +1,3 @@
-const readingList = document.getElementById("reading-list")
+const readingList = document.getElementById("reading-list");
 
-function displayReadingList(){
-    
-}
+function displayReadingList() {}
