@@ -2,11 +2,12 @@
     "readingList":[{
         "id": "",
         "booktitle": "",
-        "author": ""
+        "author": "",
+        "genre":
 }],
     "movieList": [{
         "id": "",
-        "movietitle": ""
+        "movietitle": ""    
     }],
     "toDo": [{
         "title": "",
