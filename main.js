@@ -1,5 +1,9 @@
 const readingList = document.getElementById("reading-list");
-//  console.log(readingList);
+const readingButton = document.getElementById("rl");
+const modal = document.getElementById("modal-info");
 
 
-function displayReadingList() {}
+readingButton.addEventListener("click", function displayReadingList() {
+    modal.style.display = "block";
+}
+)
