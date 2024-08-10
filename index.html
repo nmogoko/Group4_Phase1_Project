@@ -1,46 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Productivity App</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="index.css" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
     <div class="container">
         <div class="grid">
             <div class="item">
-                <div class="icon"><img src="https://i.pinimg.com/originals/c6/db/f3/c6dbf37e612f68e8faaa236b149287d9.png" alt=""></div>
+                <div class="icon">
+                    <img src="https://i.pinimg.com/originals/c6/db/f3/c6dbf37e612f68e8faaa236b149287d9.png" alt=""/>
+                </div>
                 <div>Reading List</div>
             </div>
             <div class="item">
-                <div class="icon"><img src="https://i.pinimg.com/originals/ea/8d/11/ea8d11f1ffc6355b8a440106ce61d0f3.jpg" alt=""></div>
+                <div class="icon">
+                    <img src="https://i.pinimg.com/originals/ea/8d/11/ea8d11f1ffc6355b8a440106ce61d0f3.jpg" alt=""/>
+                </div>
                 <div>Movie List</div>
             </div>
             <div class="item">
-                <div class="icon"><img src="https://static-00.iconduck.com/assets.00/calendar-small-icon-1863x2048-ves2yjyu.png" alt=""></div>
+                <div class="icon">
+                    <img src="https://static-00.iconduck.com/assets.00/calendar-small-icon-1863x2048-ves2yjyu.png" alt=""/>
+                </div>
                 <div>Content Calendar</div>
             </div>
             <div class="item">
-                <div class="icon"><img src="https://cdn-icons-png.flaticon.com/512/2133/2133041.png" alt=""></div>
+                <div class="icon">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2133/2133041.png" alt=""/>
+                </div>
                 <div>Training Schedule</div>
             </div>
             <div class="item">
-                <div class="icon"><img src="https://cdn-icons-png.flaticon.com/256/1024/1024824.png" alt=""></div>
+                <div class="icon">
+                    <img src="https://cdn-icons-png.flaticon.com/256/1024/1024824.png" alt=""/>
+                </div>
                 <div>Quick Notes</div>
             </div>
             <div class="item">
-                <div class="icon"><img src="https://static.vecteezy.com/system/resources/previews/015/890/558/original/daily-task-icon-outline-work-schedule-vector.jpg" alt=""></div>
+                <div class="icon">
+                    <img src="https://static.vecteezy.com/system/resources/previews/015/890/558/original/daily-task-icon-outline-work-schedule-vector.jpg" alt=""/>
+                </div>
                 <div>Daily Tasks</div>
             </div>
         </div>
-        <input type="text" class="search" placeholder="Search">
+        <input type="text" class="search" placeholder="Search" />
         <div class="footer">
-            <div class="footer-icon"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSo9F50hchaZ6vsqhzBrBtzxl2NwK_kEsfRw&s" alt=""></div>
-            <div class="footer-icon"><img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/google-icon.png" alt=""></div>
-            <div class="footer-icon"><img src="https://static.vecteezy.com/system/resources/previews/021/059/827/non_2x/chatgpt-logo-chat-gpt-icon-on-white-background-free-vector.jpg" alt=""></div>
-            <div class="footer-icon"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRn-ufcDwanf1iuE9DAKB2HdXNjoVeEWhtvIQ&s" alt=""></div>
+            <div class="footer-icon">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSo9F50hchaZ6vsqhzBrBtzxl2NwK_kEsfRw&s" alt=""/>
+            </div>
+            <div class="footer-icon">
+                <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/google-icon.png" alt=""/>
+            </div>
+            <div class="footer-icon">
+                <img src="https://static.vecteezy.com/system/resources/previews/021/059/827/non_2x/chatgpt-logo-chat-gpt-icon-on-white-background-free-vector.jpg" alt=""/>
+            </div>
+            <div class="footer-icon">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRn-ufcDwanf1iuE9DAKB2HdXNjoVeEWhtvIQ&s" alt=""/>
+            </div>
+        </div>
+   
+        <!-- Sign up form -->
+        <div class="form-box">
+            <form action="" name="Formfill" onsubmit="return validation()">
+                <h2>Sign Up</h2>
+                <p id="result">head</p>
+                <div class="input-box">
+                    <input type="text" name="Username" placeholder="username" />
+                </div>
+                <div class="input-box">
+                    <i class='bx bxs-envelope'></i>
+                    <input type="email" name="Email" placeholder="Email" />
+                </div>
+                <div class="input-box">
+                    <input type="password" name="Password" placeholder="password" />
+                </div>
+                <div class="input-box">
+                    <i class='bx bxs-lock-alt'></i>
+                    <input type="password" name="CPassword" placeholder="Confirm Password" />
+                </div>
+                <div class="button">
+                    <input type="submit" class="btn" value="Register" />
+                </div>
+                <div class="group">
+                    <span><a href="#">Forget-Password</a></span>
+                    <span><a href="#">Login</a></span>
+                </div>
+            </form>
         </div>
     </div>
+    <script src="./main.js"></script>
 </body>
 </html>

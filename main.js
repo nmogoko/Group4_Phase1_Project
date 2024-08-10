@@ -1,1 +1,25 @@
-const card = document.querySelector(".card");
+function validation() {
+    if (document.Formfill.Username.value == "") {
+      document.getElementById("result").innerHTML = "Enter Username*";
+      return false;
+    } else if (document.Formfill.Email.value == "") {
+      document.getElementById("result").innerHTML = "Enter your Email*";
+      return false;
+    } else if (document.Formfill.Password.value == "") {
+      document.getElementById("result").innerHTML = "Enter your Password";
+      return false;
+    } else if (document.Formfill.Password.value.length < 6) {
+      document.getElementById("result").innerHTML = "Password must be 6 characters long";
+      return false;
+    } else if (document.Formfill.CPassword.value == "") {
+      document.getElementById("result").innerHTML = "Enter Confirm Password";
+      return false;
+    } else if (document.Formfill.Password.value !== document.Formfill.CPassword.value) {
+      document.getElementById("result").innerHTML = "Passwords do not match";
+      return false;
+    } else {
+      alert("Successfully Registered");
+      return true;
+    }
+  }
+  
