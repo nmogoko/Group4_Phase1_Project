@@ -22,3 +22,13 @@ for (let i = 0; i < close.length; i++) {
 readingButton.addEventListener("click", ()=>{
     modal.style.display = "block";
 });
+
+// function saveChanges(){
+//     fetch(`http://localhost:3000/readingList`, {
+//         method: "POST",
+//         body: JSON.stringify({readingList }),
+//         headers: myHeaders,
+//     })
+//     .then(res=>res.json())
+//     .then(res =>)
+// }
