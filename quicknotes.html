@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quick Notes</title>
+    <link rel="stylesheet" href="/quicknotes.css" />
+  </head>
+  <body>
+    <!-- Home Page (Hidden by default) -->
+    <div id="homePage" style="display: none">
+      <h1>Welcome to Quick Notes</h1>
+      <button id="quickNotes">Go to Quick Notes</button>
+    </div>
+
+    <!-- Quick Notes Page -->
+    <div id="quickNotesPage" class="quick-notes-container">
+      <h1>Quick Notes</h1>
+      <div class="note-input-container">
+        <input type="text" id="note-input" placeholder="Enter a new note" />
+        <button id="add-note">Add Note</button>
+      </div>
+      <ul id="notes-list"></ul>
+      <button id="backToHome" class="back-button">Back to Home</button>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
