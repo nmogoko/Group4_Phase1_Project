@@ -1,27 +1,26 @@
-const readingList = document.getElementById("reading-list");
-const readingButton = document.getElementById("rl");
+const readingContainer = document.getElementById("reading-container");
 const modal = document.getElementById("modal-info");
 const saveButton = document.getElementById("save-button");
 const closeButton = document.getElementById("close-button");
-const close = document.getElementsByClassName("btn-close");
+const addButton = document.getElementById("add-button")
 
 function closeModal (){
     modal.style.display = "none";
 }
 
+function displayModal (){
+    modal.style.display = "block"
+}
+
 closeButton.addEventListener("click", closeModal);
+
 // closeButton.addEventListener("click", ()=>{
 //     this.style.display = "none";
 // <Why will this not work? })
 
-for (let i = 0; i < close.length; i++) {
-    close[i].addEventListener("click", closeModal);
-  }
 
+readingContainer.addEventListener("click", displayModal);
 
-readingButton.addEventListener("click", ()=>{
-    modal.style.display = "block";
-});
 
 // function saveChanges(){
 //     fetch(`http://localhost:3000/readingList`, {

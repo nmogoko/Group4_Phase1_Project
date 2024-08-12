@@ -15,23 +15,21 @@
   <body>
     <div class="container">
       <div class="grid">
-        <div class="item" id="readling-list">
+        <div class="item" id="reading-container">
           <div class="icon">
             <img
               src="https://i.pinimg.com/originals/c6/db/f3/c6dbf37e612f68e8faaa236b149287d9.png"
               alt=""
             />
           </div>
-          <div class="d-grid gap-2 mx-auto">
-            <button class="btn btn-primary" type="button" id="rl">Reading List</button>
-          </div>
+          <div>Reading List</div>
           <!--Reading List Modal -->
           <div id="modal-info" class="modal" tabindex="-1">
             <div class="modal-dialog modal-dialog-scrollable">
               <div class="modal-content">
                 <div class="modal-header">
                   <h5 class="modal-title">Reading List</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  <button type="button" id="close-button" class="btn-close" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                   <form>
@@ -49,15 +47,15 @@
                         <input class="form-check-input me-1" type="checkbox" value="" id="secondCheckbox">
                         <label class="form-check-label" for="secondCheckbox">Second checkbox</label>
                       </li>
-                      <li class="list-group-item">
-                        <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox">
-                        <label class="form-check-label" for="thirdCheckbox">Third checkbox</label>
-                      </li>
+                      <li className="list-group-item d-flex align-items-center">
+                        <input className="form-check-input me-2" type="checkbox" value="" id="thirdCheckbox" />
+                        <label className="form-check-label ms-2" for="thirdCheckbox">Read</label>
+                    </li>
                     </ul>
                   </div>
                 </div>
                 <div class="modal-footer">
-                  <button type="button" id="close-button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" id="add-button" class="btn btn-secondary" >Add</button>
                   <button type="button" id="save-button" class="btn btn-primary" >Save changes</button>
                 </div>
               </div>
