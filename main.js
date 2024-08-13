@@ -1,33 +1,33 @@
-const readingContainer = document.getElementById("reading-container");
 const modal = document.getElementById("modal-info");
-const saveButton = document.getElementById("save-button");
-const closeButton = document.getElementById("close-button");
-const addButton = document.getElementById("add-button")
+const addButton = document.querySelector("#add-button");
 
-function closeModal (){
-    modal.style.display = "none";
-}
+const titleInput = document.querySelector("#title");
+const authorInput = document.querySelector("#author");
+const genreInput = document.querySelector("#genre");
 
-function displayModal (){
-    modal.style.display = "block"
-}
+addButton.addEventListener("click", () => {
+  if ([null, ""].includes(titleInput.value)) return;
+  if ([null, ""].includes(authorInput.value)) return;
+  if ([null, ""].includes(genreInput.value)) return;
 
-closeButton.addEventListener("click", closeModal);
+  fetch("http://localhost:3000/readingList", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      title: titleInput.value,
+      author: authorInput.value,
+      genre: genreInput.value,
+    }),
+  })
+    .then((response) => response)
+    .then((data) => console.log(data));
+});
 
-// closeButton.addEventListener("click", ()=>{
-//     this.style.display = "none";
-// <Why will this not work? })
+// const displayReadingList(){
+//     list = document.createElement(`li`)
+//     list.innerHTML= ""
 
 
-readingContainer.addEventListener("click", displayModal);
-
-
-// function saveChanges(){
-//     fetch(`http://localhost:3000/readingList`, {
-//         method: "POST",
-//         body: JSON.stringify({readingList }),
-//         headers: myHeaders,
-//     })
-//     .then(res=>res.json())
-//     .then(res =>)
 // }
