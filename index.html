@@ -1,97 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Productivity App</title>
-    <link rel="stylesheet" href="index.css" />
-  </head>
-  <body>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
     <div class="container">
-      <div class="grid">
-        <div class="item">
-          <div class="icon">
-            <img
-              src="https://i.pinimg.com/originals/c6/db/f3/c6dbf37e612f68e8faaa236b149287d9.png"
-              alt=""
-            />
-          </div>
-          <div>Reading List</div>
+        <div class="grid">
+            <div class="item">
+                <div class="icon">
+                    <img src="https://i.pinimg.com/originals/c6/db/f3/c6dbf37e612f68e8faaa236b149287d9.png" alt="Reading List Icon">
+                </div>
+                <div>Reading List</div>
+            </div>
+            <div class="item">
+                <div class="icon">
+                    <img src="https://i.pinimg.com/originals/ea/8d/11/ea8d11f1ffc6355b8a440106ce61d0f3.jpg" alt="Movie List Icon">
+                </div>
+                <div>Movie List</div>
+            </div>
+            <div class="item">
+                <div class="icon">
+                    <img src="https://static-00.iconduck.com/assets.00/calendar-small-icon-1863x2048-ves2yjyu.png" alt="Content Calendar Icon">
+                </div>
+                <div id="content-calendar">Content Calendar</div>
+            </div>
+            <div class="item">
+                <div class="icon">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2133/2133041.png" alt="Training Schedule Icon">
+                </div>
+                <div>Training Schedule</div>
+            </div>
+            <div class="item">
+                <div class="icon">
+                    <img src="https://cdn-icons-png.flaticon.com/256/1024/1024824.png" alt="Quick Notes Icon">
+                </div>
+                <div>Quick Notes</div>
+            </div>
+            <div class="item">
+                <div class="icon">
+                    <img src="https://static.vecteezy.com/system/resources/previews/015/890/558/original/daily-task-icon-outline-work-schedule-vector.jpg" alt="Daily Tasks Icon">
+                </div>
+                <div>Daily Tasks</div>
+            </div>
         </div>
-        <div class="item">
-          <div class="icon">
-            <img
-              src="https://i.pinimg.com/originals/ea/8d/11/ea8d11f1ffc6355b8a440106ce61d0f3.jpg"
-              alt=""
-            />
-          </div>
-          <div>Movie List</div>
+
+        <!-- Search input moved outside of grid -->
+        <input type="text" class="search" placeholder="Search">
+
+        <div class="footer">
+            <div class="footer-icon">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSo9F50hchaZ6vsqhzBrBtzxl2NwK_kEsfRw&s" alt="Footer Icon 1">
+            </div>
+            <div class="footer-icon">
+                <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/google-icon.png" alt="Google Icon">
+            </div>
+            <div class="footer-icon">
+                <img src="https://static.vecteezy.com/system/resources/previews/021/059/827/non_2x/chatgpt-logo-chat-gpt-icon-on-white-background-free-vector.jpg" alt="ChatGPT Icon">
+            </div>
+            <div class="footer-icon">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRn-ufcDwanf1iuE9DAKB2HdXNjoVeEWhtvIQ&s" alt="Footer Icon 4">
+            </div>
         </div>
-        <div class="item">
-          <div class="icon">
-            <img
-              src="https://static-00.iconduck.com/assets.00/calendar-small-icon-1863x2048-ves2yjyu.png"
-              alt=""
-            />
-          </div>
-          <div>Content Calendar</div>
-        </div>
-        <div class="item">
-          <div class="icon">
-            <img
-              src="https://cdn-icons-png.flaticon.com/512/2133/2133041.png"
-              alt=""
-            />
-          </div>
-          <div>Training Schedule</div>
-        </div>
-        <div class="item">
-          <div class="icon">
-            <img
-              src="https://cdn-icons-png.flaticon.com/256/1024/1024824.png"
-              alt=""
-            />
-          </div>
-          <div>Quick Notes</div>
-        </div>
-        <div class="item">
-          <div class="icon">
-            <img
-              src="https://static.vecteezy.com/system/resources/previews/015/890/558/original/daily-task-icon-outline-work-schedule-vector.jpg"
-              alt=""
-            />
-          </div>
-          <div>Daily Tasks</div>
-        </div>
-      </div>
-      <input type="text" class="search" placeholder="Search" />
-      <div class="footer">
-        <div class="footer-icon">
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSo9F50hchaZ6vsqhzBrBtzxl2NwK_kEsfRw&s"
-            alt=""
-          />
-        </div>
-        <div class="footer-icon">
-          <img
-            src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/google-icon.png"
-            alt=""
-          />
-        </div>
-        <div class="footer-icon">
-          <img
-            src="https://static.vecteezy.com/system/resources/previews/021/059/827/non_2x/chatgpt-logo-chat-gpt-icon-on-white-background-free-vector.jpg"
-            alt=""
-          />
-        </div>
-        <div class="footer-icon">
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRn-ufcDwanf1iuE9DAKB2HdXNjoVeEWhtvIQ&s"
-            alt=""
-          />
-        </div>
-      </div>
     </div>
-    <script src="./main.js"></script>
-  </body>
+
+    <!-- Calendar Modal with updated structure -->
+    <div id="calendarModal" class="modal">
+        <div class="modal-content">
+            <span class="close close-calendar">&times;</span>
+            <table id="calendarTable">
+                <thead>
+                    <tr>
+                        <th><button id="prevMonthButton">&lt;</button></th>
+                        <th colspan="5" id="monthYear"></th>
+                        <th><button id="nextMonthButton">&gt;</button></th>
+                    </tr>
+                    <tr>
+                        <th>Sun</th>
+                        <th>Mon</th>
+                        <th>Tue</th>
+                        <th>Wed</th>
+                        <th>Thu</th>
+                        <th>Fri</th>
+                        <th>Sat</th>
+                    </tr>
+                </thead>
+                <tbody id="calendarDays"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Event Modal with consistent close button class -->
+    <div id="eventModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Edit Event</h2>
+            <form id="eventForm">
+                <div class="form-group">
+                    <label for="eventTitle">Title</label>
+                    <input type="text" id="eventTitle" name="eventTitle" placeholder="Input Event Title...">
+                </div>
+                <div class="form-group">
+                    <label for="eventDate">Date</label>
+                    <input type="date" id="eventDate" name="eventDate" placeholder="Select Date">
+                </div>
+                <div class="form-group">
+                    <label for="eventStartTime">From</label>
+                    <input type="time" id="eventStartTime" name="eventStartTime">
+                </div>
+                <div class="form-group">
+                    <label for="eventEndTime">To</label>
+                    <input type="time" id="eventEndTime" name="eventEndTime">
+                </div>
+                
+                <div class="form-group">
+                    <label for="eventLocation">Location</label>
+                    <input type="text" id="eventLocation" name="eventLocation" placeholder="Input Event Location...">
+                </div>
+                <div class="form-group">
+                    <label for="eventCalendar">Calendar</label>
+                    <input type="text" id="eventCalendar" name="eventCalendar" value="LEWIS KIPKEMOI" disabled>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Add Event</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
 </html>

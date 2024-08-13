@@ -8,7 +8,7 @@ body {
 .container {
     max-width: 400px;
     margin: 0 auto;
-    background-color: #ff7f76;
+    background-color: #76cdff;
     border-radius: 20px;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
@@ -59,11 +59,198 @@ body {
         grid-template-columns: repeat(3, 1fr);
     }
 }
+
 .icon img {
     width: 70px;
     height: 60px;
 }
+
 .footer-icon img {
     width: 30px;
     height: 30px;
+}
+
+/* Modal Styles */
+/* Modal Background */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fff;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 1200px;
+    max-height: 900px;
+    overflow: auto; /* Enable scroll if content exceeds the view */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Close Button */
+.close,
+.close-calendar {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus,
+.close-calendar:hover,
+.close-calendar:focus {
+    color: #000;
+    text-decoration: none;
+}
+
+/* Calendar Table */
+#calendarTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#calendarTable th, #calendarTable td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+#calendarTable thead th {
+    background-color: #f0f0f0;
+    color: #555;
+    font-weight: bold;
+}
+
+#calendarTable tbody td {
+    height: 80px;
+    vertical-align: top;
+    position: relative;
+}
+
+#calendarTable tbody td:hover {
+    background-color: #f9f9f9;
+}
+
+/* Month and Year Header */
+#monthYear {
+    font-size: 24px; /* Larger size for visibility */
+    font-weight: bold;
+    text-align: center;
+    margin: 10px 0;
+}
+
+#prevMonthButton, #nextMonthButton {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 3px;
+}
+
+#prevMonthButton:hover,
+#nextMonthButton:hover {
+    background-color: #f0f0f0;
+}
+
+/* Calendar Days Styling */
+#calendarDays td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+#calendarDays td:nth-child(7n + 1) {
+    border-left: none;
+}
+
+#calendarDays td:nth-child(-n + 7) {
+    border-top: none;
+}
+
+#calendarDays .event {
+    background-color: #e6f7ff;
+    border: 1px solid #91d5ff;
+    padding: 5px;
+    margin-top: 5px;
+    border-radius: 3px;
+    font-size: 12px;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#calendarDays .event:hover {
+    background-color: #bae7ff;
+}
+
+/* Form */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+.form-group input[type="text"],
+.form-group input[type="date"],
+.form-group input[type="time"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.form-group input[disabled] {
+    background-color: #f0f0f0;
+    cursor: not-allowed;
+}
+
+.form-group button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.form-group button:hover {
+    background-color: #45a049;
 }
