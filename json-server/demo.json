@@ -1,34 +1,10 @@
 {
   "readingList": [
     {
-      "id": "1",
-      "booktitle": "To Kill a Mockingbird",
-      "author": "Harper Lee",
-      "genre": "Fiction"
-    },
-    {
       "id": "2",
       "booktitle": "Hekaya za Abunuwasi",
       "author": "Nasreddin Hodja",
       "genre": "fiction"
-    },
-    {
-      "id": "3",
-      "booktitle": "Long walk to freedom",
-      "author": "Nelson Mandela",
-      "genre": "Autobiography"
-    },
-    {
-      "id": "b1a0",
-      "title": "6RURD6U8FT7TTTTT",
-      "author": "asdfgrdgghhhhhhhhhyh",
-      "genre": "hfrgthgfdherhgydxd"
-    },
-    {
-      "id": "2891",
-      "title": "wer",
-      "author": "345",
-      "genre": "3e1124"
     }
   ],
   "movieList": [
