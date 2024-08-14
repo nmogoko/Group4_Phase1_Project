@@ -16,24 +16,84 @@
   "activities": {
     "item": {
       "item": {
-        "reading": [],
-        "movies": [],
-        "calendar": [],
-        "training": [],
-        "notes": [],
-        "todo": []
+        "item": {
+          "item": {
+            "item": {
+              "item": {
+                "item": {
+                  "item": {
+                    "reading": [],
+                    "movies": [],
+                    "calendar": [],
+                    "training": [],
+                    "notes": [],
+                    "todo": []
+                  },
+                  "todo": [
+                    {
+                      "text": "cool",
+                      "completed": false
+                    }
+                  ]
+                },
+                "notes": [
+                  {
+                    "text": "hey",
+                    "completed": false
+                  }
+                ]
+              },
+              "todo": [
+                {
+                  "text": "eat",
+                  "completed": false
+                }
+              ]
+            },
+            "todo": [
+              {
+                "text": "eat",
+                "completed": false
+              },
+              {
+                "text": "ride bike",
+                "completed": false
+              }
+            ]
+          },
+          "todo": [
+            {
+              "text": "eat",
+              "completed": false
+            },
+            {
+              "text": "ride bike",
+              "completed": true
+            }
+          ]
+        },
+        "todo": [
+          {
+            "text": "eat",
+            "completed": true
+          },
+          {
+            "text": "ride bike",
+            "completed": true
+          }
+        ]
       },
-      "todo": [
+      "calendar": [
         {
-          "text": "cool",
+          "text": "2024-08-20: go to  church",
           "completed": false
         }
       ]
     },
-    "notes": [
+    "calendar": [
       {
-        "text": "hey",
-        "completed": false
+        "text": "2024-08-20: go to  church",
+        "completed": true
       }
     ]
   }
