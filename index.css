@@ -11,7 +11,7 @@ body {
     background-color: #76cdff;
     border-radius: 20px;
     padding: 20px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .grid {
@@ -21,16 +21,26 @@ body {
 }
 
 .item {
-    background-color: #fff;
+    background-color: #ffffff;
     border-radius: 10px;
     padding: 20px;
     text-align: center;
     cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.item:hover {
+    transform: translateY(-5px);
 }
 
 .icon {
     font-size: 24px;
     margin-bottom: 10px;
+}
+
+.icon img {
+    width: 70px;
+    height: 60px;
 }
 
 .search {
@@ -51,6 +61,11 @@ body {
     font-size: 20px;
 }
 
+.footer-icon img {
+    width: 30px;
+    height: 30px;
+}
+
 @media (min-width: 768px) {
     .container {
         max-width: 600px;
@@ -60,67 +75,52 @@ body {
     }
 }
 
-.icon img {
-    width: 70px;
-    height: 60px;
-}
-
-.footer-icon img {
-    width: 30px;
-    height: 30px;
-}
-
 /* Modal Styles */
-/* Modal Background */
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1000; /* Sit on top */
+    display: none; 
+    position: fixed; 
+    z-index: 1000; 
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0, 0, 0, 0.5);
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: background-color 0.3s ease;
 }
 
-/* Modal Content */
 .modal-content {
-    background-color: #fff;
+    background-color: #ffffff;
     padding: 30px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
+    border-radius: 15px;
     width: 90%;
     max-width: 1200px;
-    max-height: 900px;
-    overflow: auto; /* Enable scroll if content exceeds the view */
+    max-height: 90%;
+    overflow: auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     box-sizing: border-box;
     position: relative;
-    display: flex;
-    flex-direction: column;
 }
 
-/* Close Button */
 .close,
 .close-calendar {
-    color: #aaa;
+    color: #aaaaaa;
     font-size: 28px;
     font-weight: bold;
     position: absolute;
     top: 15px;
     right: 20px;
     cursor: pointer;
+    transition: color 0.3s ease;
 }
 
 .close:hover,
 .close:focus,
 .close-calendar:hover,
 .close-calendar:focus {
-    color: #000;
-    text-decoration: none;
+    color: #000000;
 }
 
 /* Calendar Table */
@@ -129,15 +129,16 @@ body {
     border-collapse: collapse;
 }
 
-#calendarTable th, #calendarTable td {
+#calendarTable th, 
+#calendarTable td {
     padding: 10px;
     text-align: center;
-    border: 1px solid #ddd;
+    border: 1px solid #dddddd;
 }
 
 #calendarTable thead th {
     background-color: #f0f0f0;
-    color: #555;
+    color: #555555;
     font-weight: bold;
 }
 
@@ -145,27 +146,29 @@ body {
     height: 80px;
     vertical-align: top;
     position: relative;
+    transition: background-color 0.3s ease;
 }
 
 #calendarTable tbody td:hover {
     background-color: #f9f9f9;
 }
 
-/* Month and Year Header */
 #monthYear {
-    font-size: 24px; /* Larger size for visibility */
+    font-size: 24px;
     font-weight: bold;
     text-align: center;
     margin: 10px 0;
 }
 
-#prevMonthButton, #nextMonthButton {
-    background-color: #fff;
-    border: 1px solid #ddd;
+#prevMonthButton, 
+#nextMonthButton {
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
     padding: 5px 10px;
     cursor: pointer;
     font-size: 18px;
     border-radius: 3px;
+    transition: background-color 0.3s ease;
 }
 
 #prevMonthButton:hover,
@@ -173,10 +176,10 @@ body {
     background-color: #f0f0f0;
 }
 
-/* Calendar Days Styling */
+/* Calendar Events */
 #calendarDays td {
     padding: 10px;
-    border: 1px solid #ddd;
+    border: 1px solid #dddddd;
 }
 
 #calendarDays td:nth-child(7n + 1) {
@@ -187,7 +190,7 @@ body {
     border-top: none;
 }
 
-#calendarDays .event {
+.event {
     background-color: #e6f7ff;
     border: 1px solid #91d5ff;
     padding: 5px;
@@ -198,62 +201,14 @@ body {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    transition: background-color 0.3s ease;
 }
 
-#calendarDays .event:hover {
+.event:hover {
     background-color: #bae7ff;
 }
 
-/* Form */
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-.form-group {
-    margin-bottom: 15px;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: #555;
-}
-
-.form-group input[type="text"],
-.form-group input[type="date"],
-.form-group input[type="time"] {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    font-size: 16px;
-}
-
-.form-group input[disabled] {
-    background-color: #f0f0f0;
-    cursor: not-allowed;
-}
-
-.form-group button {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    border-radius: 4px;
-    cursor: pointer;
-    width: 100%;
-}
-
-.form-group button:hover {
-    background-color: #45a049;
-}
+/* Event Details Tooltip */
 .event-details {
     position: absolute;
     top: 100%;
@@ -267,7 +222,7 @@ form {
     z-index: 10;
     display: none;
     font-size: 12px;
-    color: #333;
+    color: #333333;
 }
 
 .has-events {
@@ -298,7 +253,7 @@ form {
     width: 18px;
     height: 18px;
     background-color: #4CAF50;
-    color: white;
+    color: #ffffff;
     border-radius: 50%;
     text-align: center;
     line-height: 18px;
@@ -307,3 +262,115 @@ form {
     bottom: 2px;
     right: 2px;
 }
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555555;
+}
+
+.form-group input[type="text"],
+.form-group input[type="date"],
+.form-group input[type="time"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.form-group input[disabled] {
+    background-color: #f0f0f0;
+    cursor: not-allowed;
+}
+
+.form-group button {
+    background-color: #4CAF50;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.form-group button:hover {
+    background-color: #45a049;
+}
+
+/* Book List */
+#book-list {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#book-list div {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    font-size: 1.1rem;
+    color: #444444;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#book-list div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.book-cover {
+    width: 60px;
+    height: 90px;
+    border-radius: 8px;
+    margin-right: 15px;
+    object-fit: cover;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.book-details {
+    flex-grow: 1;
+}
+
+.book-title {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #333333;
+    margin-bottom: 5px;
+}
+
+.book-author {
+    color: #777777;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.book-description {
+    font-size: 0.9rem;
+    color: #555555;
+    line-height: 1.5;
+}
+
