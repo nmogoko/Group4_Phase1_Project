@@ -40,8 +40,8 @@ body {
     height: 60px;
 }
 
-/* To-Do List Styles */
-.todo-container {
+/* List Container Styles */
+.list-container {
     background-color: #fff;
     padding: 20px;
     border-radius: 10px;
@@ -50,19 +50,22 @@ body {
     display: none; /* Initially hidden */
 }
 
-#todo-form {
+.list-container form {
     display: flex;
     gap: 10px;
+    margin-bottom: 20px;
 }
 
-#todo-form input[type="text"] {
+.list-container input[type="text"],
+.list-container input[type="date"],
+.list-container textarea {
     flex-grow: 1;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
 
-#todo-form button {
+.list-container button {
     padding: 10px 20px;
     background-color: #ff7f76;
     border: none;
@@ -72,17 +75,16 @@ body {
     transition: background-color 0.3s ease;
 }
 
-#todo-form button:hover {
+.list-container button:hover {
     background-color: #ff4a3c;
 }
 
-#todo-list {
+.list-container ul {
     list-style-type: none;
     padding: 0;
-    margin-top: 20px;
 }
 
-.todo-item {
+.list-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -94,13 +96,13 @@ body {
     transition: background-color 0.3s ease;
 }
 
-.todo-item.completed {
+.list-item.completed {
     text-decoration: line-through;
     color: #aaa;
     background-color: #e0e0e0;
 }
 
-.todo-item button {
+.list-item button {
     background-color: #ff4a3c;
     border: none;
     border-radius: 5px;
@@ -110,7 +112,7 @@ body {
     transition: background-color 0.3s ease;
 }
 
-.todo-item button:hover {
+.list-item button:hover {
     background-color: #d4372b;
 }
 
@@ -133,6 +135,61 @@ body {
 .footer-icon img {
     width: 30px;
     height: 30px;
+}
+
+/* Auth Styles */
+#auth-container {
+    max-width: 300px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#auth-container h2 {
+    text-align: center;
+    color: #ff7f76;
+}
+
+#auth-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#auth-container input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#auth-container button {
+    padding: 10px;
+    background-color: #ff7f76;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#auth-container button:hover {
+    background-color: #ff4a3c;
+}
+
+#auth-container p {
+    text-align: center;
+    margin-top: 10px;
+}
+
+#auth-container a {
+    color: #ff7f76;
+    text-decoration: none;
+}
+
+#auth-container a:hover {
+    text-decoration: underline;
 }
 
 /* Media Queries */

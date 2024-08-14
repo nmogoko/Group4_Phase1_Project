@@ -1,0 +1,40 @@
+{
+  "users": [
+    {
+      "id": "71c9",
+      "name": "lee mwangi one",
+      "email": "baguvix@gmail.com",
+      "password": "1234"
+    },
+    {
+      "id": "a4c4",
+      "name": "lee mwangi",
+      "email": "were@gmail.com",
+      "password": "1234"
+    }
+  ],
+  "activities": {
+    "item": {
+      "item": {
+        "reading": [],
+        "movies": [],
+        "calendar": [],
+        "training": [],
+        "notes": [],
+        "todo": []
+      },
+      "todo": [
+        {
+          "text": "cool",
+          "completed": false
+        }
+      ]
+    },
+    "notes": [
+      {
+        "text": "hey",
+        "completed": false
+      }
+    ]
+  }
+}

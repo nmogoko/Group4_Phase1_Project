@@ -7,74 +7,145 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <div class="container">
-        <div class="grid">
-            <div class="item">
-                <div class="icon">
-                    <img src="https://i.pinimg.com/originals/c6/db/f3/c6dbf37e612f68e8faaa236b149287d9.png" alt=""/>
-                </div>
-                <div>Reading List</div>
-            </div>
-            <div class="item">
-                <div class="icon">
-                    <img src="https://i.pinimg.com/originals/ea/8d/11/ea8d11f1ffc6355b8a440106ce61d0f3.jpg" alt=""/>
-                </div>
-                <div>Movie List</div>
-            </div>
-            <div class="item">
-                <div class="icon">
-                    <img src="https://static-00.iconduck.com/assets.00/calendar-small-icon-1863x2048-ves2yjyu.png" alt=""/>
-                </div>
-                <div>Content Calendar</div>
-            </div>
-            <div class="item">
-                <div class="icon">
-                    <img src="https://cdn-icons-png.flaticon.com/512/2133/2133041.png" alt=""/>
-                </div>
-                <div>Training Schedule</div>
-            </div>
-            <div class="item">
-                <div class="icon">
-                    <img src="https://cdn-icons-png.flaticon.com/256/1024/1024824.png" alt=""/>
-                </div>
-                <div>Quick Notes</div>
-            </div>
-            <div class="item" id="toggle-todo">
-                <div class="icon">
-                    <img src="https://static.vecteezy.com/system/resources/previews/015/890/558/original/daily-task-icon-outline-work-schedule-vector.jpg" alt=""/>
-                </div>
-                <div>Daily Tasks</div>
-            </div>
-        </div>
-
-        <!-- To-Do List Section (Initially Hidden) -->
-        <div class="todo-container" id="todo-container">
-            <h1>To-Do List</h1>
-            <form id="todo-form">
-                <input type="text" id="new-task" placeholder="Add a new task..." required>
-                <button type="submit">Add</button>
+    <div id="auth-container">
+        <div id="login-form">
+            <h2>Login</h2>
+            <form id="login">
+                <input type="email" id="login-email" placeholder="Email" required>
+                <input type="password" id="login-password" placeholder="Password" required>
+                <button type="submit">Login</button>
             </form>
-            <ul id="todo-list"></ul>
+            <p>Don't have an account? <a href="#" id="show-register">Register</a></p>
         </div>
-
-        <input type="text" class="search" placeholder="Search" />
-
-        <div class="footer">
-            <div class="footer-icon">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSo9F50hchaZ6vsqhzBrBtzxl2NwK_kEsfRw&s" alt=""/>
-            </div>
-            <div class="footer-icon">
-                <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/google-icon.png" alt=""/>
-            </div>
-            <div class="footer-icon">
-                <img src="https://static.vecteezy.com/system/resources/previews/021/059/827/non_2x/chatgpt-logo-chat-gpt-icon-on-white-background-free-vector.jpg" alt=""/>
-            </div>
-            <div class="footer-icon">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRn-ufcDwanf1iuE9DAKB2HdXNjoVeEWhtvIQ&s" alt=""/>
-            </div>
+        <div id="register-form" style="display: none;">
+            <h2>Register</h2>
+            <form id="register">
+                <input type="text" id="register-name" placeholder="Name" required>
+                <input type="email" id="register-email" placeholder="Email" required>
+                <input type="password" id="register-password" placeholder="Password" required>
+                <button type="submit">Register</button>
+            </form>
+            <p>Already have an account? <a href="#" id="show-login">Login</a></p>
         </div>
     </div>
 
-    <script src="./main.js"></script>
+    <div id="app-container" style="display: none;">
+        <div class="container">
+            <div class="grid">
+                <div class="item" id="toggle-reading">
+                    <div class="icon">
+                        <img src="https://i.pinimg.com/originals/c6/db/f3/c6dbf37e612f68e8faaa236b149287d9.png" alt=""/>
+                    </div>
+                    <div>Reading List</div>
+                </div>
+                <div class="item" id="toggle-movie">
+                    <div class="icon">
+                        <img src="https://i.pinimg.com/originals/ea/8d/11/ea8d11f1ffc6355b8a440106ce61d0f3.jpg" alt=""/>
+                    </div>
+                    <div>Movie List</div>
+                </div>
+                <div class="item" id="toggle-calendar">
+                    <div class="icon">
+                        <img src="https://static-00.iconduck.com/assets.00/calendar-small-icon-1863x2048-ves2yjyu.png" alt=""/>
+                    </div>
+                    <div>Content Calendar</div>
+                </div>
+                <div class="item" id="toggle-training">
+                    <div class="icon">
+                        <img src="https://cdn-icons-png.flaticon.com/512/2133/2133041.png" alt=""/>
+                    </div>
+                    <div>Training Schedule</div>
+                </div>
+                <div class="item" id="toggle-notes">
+                    <div class="icon">
+                        <img src="https://cdn-icons-png.flaticon.com/256/1024/1024824.png" alt=""/>
+                    </div>
+                    <div>Quick Notes</div>
+                </div>
+                <div class="item" id="toggle-todo">
+                    <div class="icon">
+                        <img src="https://static.vecteezy.com/system/resources/previews/015/890/558/original/daily-task-icon-outline-work-schedule-vector.jpg" alt=""/>
+                    </div>
+                    <div>Daily Tasks</div>
+                </div>
+            </div>
+
+            <!-- List Containers -->
+            <div class="list-container" id="reading-container">
+                <h1>Reading List</h1>
+                <form id="reading-form">
+                    <input type="text" placeholder="Add a book..." required>
+                    <button type="submit">Add</button>
+                </form>
+                <ul id="reading-list"></ul>
+            </div>
+
+            <div class="list-container" id="movie-container">
+                <h1>Movie List</h1>
+                <form id="movie-form">
+                    <input type="text" placeholder="Add a movie..." required>
+                    <button type="submit">Add</button>
+                </form>
+                <ul id="movie-list"></ul>
+            </div>
+
+            <div class="list-container" id="calendar-container">
+                <h1>Content Calendar</h1>
+                <form id="calendar-form">
+                    <input type="date" required>
+                    <input type="text" placeholder="Add content..." required>
+                    <button type="submit">Add</button>
+                </form>
+                <ul id="calendar-list"></ul>
+            </div>
+
+            <div class="list-container" id="training-container">
+                <h1>Training Schedule</h1>
+                <form id="training-form">
+                    <input type="date" required>
+                    <input type="text" placeholder="Add training..." required>
+                    <button type="submit">Add</button>
+                </form>
+                <ul id="training-list"></ul>
+            </div>
+
+            <div class="list-container" id="notes-container">
+                <h1>Quick Notes</h1>
+                <form id="notes-form">
+                    <textarea placeholder="Add a note..." required></textarea>
+                    <button type="submit">Add</button>
+                </form>
+                <ul id="notes-list"></ul>
+            </div>
+
+            <div class="list-container" id="todo-container">
+                <h1>To-Do List</h1>
+                <form id="todo-form">
+                    <input type="text" placeholder="Add a task..." required>
+                    <button type="submit">Add</button>
+                </form>
+                <ul id="todo-list"></ul>
+            </div>
+
+            <input type="text" class="search" placeholder="Search" />
+
+            <div class="footer">
+                <div class="footer-icon">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSo9F50hchaZ6vsqhzBrBtzxl2NwK_kEsfRw&s" alt=""/>
+                </div>
+                <div class="footer-icon">
+                    <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/google-icon.png" alt=""/>
+                </div>
+                <div class="footer-icon">
+                    <img src="https://static.vecteezy.com/system/resources/previews/021/059/827/non_2x/chatgpt-logo-chat-gpt-icon-on-white-background-free-vector.jpg" alt=""/>
+                </div>
+                <div class="footer-icon">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRn-ufcDwanf1iuE9DAKB2HdXNjoVeEWhtvIQ&s" alt=""/>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="main.js"></script>
 </body>
 </html>
