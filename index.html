@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Productivity App</title>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
@@ -69,12 +70,13 @@
     </div>
 
     <!-- Reading List Modal -->
-    <div id="modal-info" class="modal" tabindex="-1">
+    <div id="modal-info" class="modal" >
         <div class="modal-dialog modal-dialog-scrollable">
             <div class="modal-content">
+                <span id="close-reading-list">&times;</span>
                 <div class="modal-header">
                     <h5 class="modal-title">Reading List</h5>
-                    <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="modal"></button>
+                    
                 </div>
                 <div class="modal-body">
                     <input type="text" name="title" id="title" class="form-control mb-3" placeholder="Title">
@@ -163,6 +165,18 @@
             <ul id="notes-list"></ul>
         </div>
     </div>
+    <div id="movieModal" class="modal">
+        <div class="modal-content">
+            <span id="close-movieList">&times;</span>
+            <h2>My Movie List</h2>
+            <form id="movieForm">
+                <input type="text" id="movieTitle" placeholder="Enter movie title" required>
+                <button type="submit">Add Movie</button>
+            </form>
+            <ul id="movieList"></ul>
+        </div>
+    </div>
+
 
     <!-- JavaScript File -->
     <script src="main.js"></script>
