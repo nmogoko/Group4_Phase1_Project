@@ -19,18 +19,89 @@
       "title": "",
       "date": "",
       "time": "",
-      "details": ""
+      "details": "",
+      "id": "4496"
     }
   ],
   "quickNotes": [
     {
-      "text": ""
+      "text": "",
+      "id": "b9b9"
     }
   ],
   "dailyTasks": [
     {
       "title": "",
-      "text": ""
+      "text": "",
+      "id": "84da"
+    }
+  ],
+  "calendar": [
+    {
+      "id": "d7ae"
+    },
+    {
+      "id": "b015",
+      "title": "",
+      "date": "2024-08-17",
+      "startTime": "",
+      "endTime": "",
+      "location": "",
+      "calendar": "LEWIS KIPKEMOI"
+    },
+    {
+      "id": "b108",
+      "title": "",
+      "date": "2024-08-08",
+      "startTime": "",
+      "endTime": "",
+      "location": "",
+      "calendar": "LEWIS KIPKEMOI"
+    },
+    {
+      "id": "ae25",
+      "title": "rr",
+      "date": "2024-08-07",
+      "startTime": "08:52",
+      "endTime": "20:50",
+      "location": "sss",
+      "calendar": "LEWIS KIPKEMOI"
+    },
+    {
+      "id": "7a83",
+      "title": "sss",
+      "date": "2024-08-14",
+      "startTime": "08:57",
+      "endTime": "20:57",
+      "location": "www",
+      "calendar": "LEWIS KIPKEMOI"
+    },
+    {
+      "id": "d683",
+      "title": "sss",
+      "date": "2024-08-14",
+      "startTime": "08:57",
+      "endTime": "20:57",
+      "location": "www",
+      "calendar": "LEWIS KIPKEMOI"
+    },
+    {
+      "id": "28f9",
+      "title": "undefined",
+      "date": "",
+      "startTime": "",
+      "endTime": "",
+      "location": "undefined",
+      "calendar": "LEWIS KIPKEMOI"
+    },
+    {
+      "id": "7672",
+      "title": "have a nap",
+      "date": "2024-08-22",
+      "startTime": "09:06",
+      "endTime": "21:06",
+      "location": "Nairobi",
+      "calendar": "LEWIS KIPKEMOI"
     }
   ]
 }

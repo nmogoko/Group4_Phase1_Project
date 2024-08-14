@@ -11,13 +11,50 @@ const eventLocation = document.getElementById("eventLocation");
 const eventCalendar = document.getElementById("eventCalendar");
 const modalClose = document.querySelectorAll(".close");
 const monthYearElement = document.getElementById("monthYear");
-const contentCalendar = document.querySelector(".item:nth-child(3)"); // Select the content calendar item
+const contentCalendar = document.querySelector(".item:nth-child(3)");
 const prevMonthButton = document.getElementById("prevMonthButton");
 const nextMonthButton = document.getElementById("nextMonthButton");
 
 let events = [];
 let currentMonth = new Date().getMonth();
 let currentYear = new Date().getFullYear();
+
+const API_URL = 'http://localhost:4001/calendar'; // Replace with your actual API endpoint
+
+// Function to fetch events from the API
+async function fetchEvents(year, month) {
+    try {
+        const response = await fetch(`${API_URL}?year=${year}&month=${month + 1}`);
+        if (!response.ok) {
+            throw new Error('Failed to fetch events');
+        }
+        events = await response.json();
+        displayCalendar();
+    } catch (error) {
+        console.error('Error fetching events:', error);
+    }
+}
+
+// Function to send a new event to the API
+async function sendEventToAPI(newEvent) {
+    try {
+        const response = await fetch(API_URL, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(newEvent),
+        });
+        if (!response.ok) {
+            throw new Error('Failed to send event');
+        }
+        const savedEvent = await response.json();
+        events.push(savedEvent);
+     
+    } catch (error) {
+        console.error('Error sending event:', error);
+    }
+}
 
 // Display calendar
 function displayCalendar() {
@@ -51,6 +88,16 @@ function displayCalendar() {
                     eventIndicator.classList.add("event-indicator");
                     eventIndicator.textContent = eventsForDate.length;
                     cell.appendChild(eventIndicator);
+                
+                    // Display event details
+                    const eventDetails = document.createElement("div");
+                    eventDetails.classList.add("event-details");
+                    eventsForDate.forEach(event => {
+                        const eventElement = document.createElement("p");
+                        eventElement.textContent = `${event.title} (${event.startTime})`;
+                        eventDetails.appendChild(eventElement);
+                    });
+                    cell.appendChild(eventDetails);
                 }
 
                 date++;
@@ -64,7 +111,7 @@ function displayCalendar() {
 // Open calendar modal
 contentCalendar.addEventListener('click', function() {
     calendarModal.style.display = "block";
-    displayCalendar();
+    fetchEvents(currentYear, currentMonth);
 });
 
 // Open modal to show events for selected date
@@ -109,35 +156,37 @@ window.onclick = function(event) {
 };
 
 // Handle event form submission
-eventForm.onsubmit = function(e) {
+eventForm.onsubmit = async function(e) {
     e.preventDefault();
+
     const newEvent = {
         title: eventTitle.value,
         date: eventDate.value,
         startTime: eventStartTime.value,
         endTime: eventEndTime.value,
+       
         location: eventLocation.value,
-        calendar: eventCalendar.value,
+        calendar: eventCalendar.value
     };
 
-    // Add event to list and close modal
-    events.push(newEvent);
+    await sendEventToAPI(newEvent);
+
     eventModal.style.display = "none";
-    displayCalendar();
+    eventForm.reset();
 };
 
 // Handle month navigation
 prevMonthButton.onclick = () => {
     currentMonth = (currentMonth - 1 + 12) % 12;
     if (currentMonth === 11) currentYear--;
-    displayCalendar();
+    fetchEvents(currentYear, currentMonth);
 };
 
 nextMonthButton.onclick = () => {
     currentMonth = (currentMonth + 1) % 12;
     if (currentMonth === 0) currentYear++;
-    displayCalendar();
+    fetchEvents(currentYear, currentMonth);
 };
 
 // Initialize calendar display
-displayCalendar();
+fetchEvents(currentYear, currentMonth);

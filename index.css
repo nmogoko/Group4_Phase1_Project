@@ -254,3 +254,56 @@ form {
 .form-group button:hover {
     background-color: #45a049;
 }
+.event-details {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 200px;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 8px;
+    z-index: 10;
+    display: none;
+    font-size: 12px;
+    color: #333;
+}
+
+.has-events {
+    position: relative;
+    cursor: pointer;
+}
+
+.has-events:hover .event-details {
+    display: block;
+}
+
+.event-details p {
+    margin: 4px 0;
+    padding: 4px;
+    background-color: #f0f0f0;
+    border-radius: 2px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.event-details p:nth-child(odd) {
+    background-color: #e8e8e8;
+}
+
+.event-indicator {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 18px;
+    font-size: 11px;
+    position: absolute;
+    bottom: 2px;
+    right: 2px;
+}
