@@ -1,0 +1,180 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f8ff;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    cursor: none; /* Hide the default cursor */
+}
+
+/* Create a custom cursor */
+.custom-cursor {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #1e90ff;
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: transform 0.1s ease-out, width 0.2s ease, height 0.2s ease;
+    z-index: 1000;
+}
+
+/* Animation on hover for interactive elements */
+button:hover ~ .custom-cursor,
+a:hover ~ .custom-cursor {
+    width: 30px;
+    height: 30px;
+    border-color: #4CAF50;
+}
+
+.container:hover ~ .custom-cursor {
+    width: 40px;
+    height: 40px;
+    border-color: #f44336;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.container:hover {
+    transform: scale(1.03);
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    border-bottom: 2px solid #f0f8ff;
+    padding-bottom: 10px;
+}
+
+#movieForm {
+    display: flex;
+    flex-direction: column;
+}
+
+#movieForm input,
+#movieForm textarea {
+    margin-bottom: 15px;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    transition: border-color 0.3s ease;
+}
+
+#movieForm input:focus,
+#movieForm textarea:focus {
+    border-color: #1e90ff;
+    outline: none;
+}
+
+#movieForm button {
+    padding: 12px 20px;
+    background-color: #1e90ff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#movieForm button:hover {
+    background-color: #1c86ee;
+}
+
+#movieList {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+#movieList li {
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    background-color: #fafafa;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: box-shadow 0.3s ease;
+}
+
+#movieList li:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.movie-info {
+    flex-grow: 1;
+}
+
+.movie-info strong {
+    font-size: 18px;
+    color: #1e90ff;
+}
+
+.watched-badge {
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px 8px;
+    border-radius: 5px;
+    margin-left: 10px;
+    font-size: 12px;
+}
+
+.movie-actions {
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    padding: 8px 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button.edit {
+    background-color: #4CAF50;
+    color: white;
+}
+
+button.edit:hover {
+    background-color: #45a049;
+}
+
+button.delete {
+    background-color: #f44336;
+    color: white;
+}
+
+button.delete:hover {
+    background-color: #e53935;
+}
+
+button.watched {
+    background-color: #1e90ff;
+    color: white;
+}
+
+button.watched:hover {
+    background-color: #1c86ee;
+}
+
+button:active {
+    transform: scale(0.95);
+}
